@@ -182,7 +182,8 @@ ArrayList
 
 ---
 
-## ▶Como Executar
+## Como Executar
+Execute a classe Main.java usando a IDE INTELLIJ
 
 ### Compilar
 
