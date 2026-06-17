@@ -179,7 +179,8 @@ ArrayList
 
 ---
 
-## ▶Como Executar
+## Como Executar
+Execute a classe Main.java usando a IDE INTELLIJ
 
 Compile via terminal com javac src/\*.java e rode java Main.
 
