@@ -44,19 +44,27 @@ public class Cup {
 
     // Mostrar seleções por grupo
     public void callGroup() {
-        System.out.println("Escolha o grupo que você quer ver:");
-        char choice = Character.toUpperCase(scanner.next().charAt(0));
+        try {
+            System.out.println("Escolha o grupo que você quer ver:");
+            char choice = Character.toUpperCase(scanner.next().charAt(0));
 
-        for(NationalTeam n : nationalTeam){
-              if(n.getGroup() == choice) {
-                  System.out.println(n);
-                  System.out.println("-------------");
-              }else{
-                  System.out.println("Opção invalida");
-              }
+            boolean found = false;
+
+            for (NationalTeam n : nationalTeam) {
+                if (n.getGroup() == choice) {
+                    System.out.println(n);
+                    System.out.println("-------------");
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Grupo inválido ou inexistente.");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Erro na leitura da entrada.");
         }
-
-
     }
 
     // Mostrar top scorers
