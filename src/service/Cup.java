@@ -86,6 +86,51 @@ public class Cup {
         }
     }
 
+    public void registerNewMatchInteractive() {
+        System.out.println("\n--- Registrar Resultado de Partida ---");
+        System.out.print("Digite o nome do Time Mandante: ");
+        String home = scanner.next();
+
+        System.out.print("Digite o nome do Time Visitante: ");
+        String away = scanner.next();
+
+        System.out.print("Gols do " + home + ": ");
+        int golsHome = scanner.nextInt();
+
+        System.out.print("Gols do " + away + ": ");
+        int golsAway = scanner.nextInt();
+
+        // Cria o objeto Match com os dados coletados
+        Match newMatch = new Match();
+        newMatch.setHomeTeam(home);
+        newMatch.setAwayTeam(away);
+        newMatch.setGolsA(golsHome);
+        newMatch.setGolsB(golsAway);
+
+        // Adiciona à lista de partidas do sistema
+        registrateMatch(newMatch);
+
+        // Lógica opcional: Atualizar a pontuação (Score) das seleções com base no resultado
+        for (NationalTeam team : nationalTeam) {
+            if (team.getName().equalsIgnoreCase(home)) {
+                if (golsHome > golsAway) {
+                    team.setScore(team.getScore() + 3); // Vitória mandante
+                } else if (golsHome == golsAway) {
+                    team.setScore(team.getScore() + 1); // Empate
+                }
+            }
+            if (team.getName().equalsIgnoreCase(away)) {
+                if (golsAway > golsHome) {
+                    team.setScore(team.getScore() + 3); // Vitória visitante
+                } else if (golsHome == golsAway) {
+                    team.setScore(team.getScore() + 1); // Empate
+                }
+            }
+        }
+
+        System.out.println("Partida registrada com sucesso!");
+    }
+
 
 
 }

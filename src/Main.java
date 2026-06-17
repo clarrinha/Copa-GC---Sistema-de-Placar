@@ -30,7 +30,7 @@ void main() {
                 break;
 
             case 2:
-                System.out.println("Ainda não implementado");
+                cup.registerNewMatchInteractive();
                 break;
 
             case 3:
