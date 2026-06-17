@@ -1,6 +1,7 @@
 package model;
 
 public class Match {
+
     // Atributos
     private String homeTeam;
     private String awayTeam;
