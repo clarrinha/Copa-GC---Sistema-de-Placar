@@ -1,19 +1,21 @@
 package model;
 
 public class Match {
-
     // Atributos
     private String homeTeam;
     private String awayTeam;
     private int golsA;
     private int golsB;
 
+
     // Getters
     public String getHomeTeam() {
+
         return homeTeam;
     }
 
     public String getAwayTeam() {
+
         return awayTeam;
     }
 
@@ -23,8 +25,10 @@ public class Match {
     }
 
     public int getGolsB() {
+
         return golsB;
     }
+
 
     // Setters
     public void setHomeTeam(String homeTeam) {
@@ -43,8 +47,11 @@ public class Match {
     }
 
     public void setGolsB(int golsB) {
+
         this.golsB = golsB;
     }
+
+
 
     // toString
     @Override
