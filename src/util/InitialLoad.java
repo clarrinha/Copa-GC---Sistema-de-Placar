@@ -47,7 +47,7 @@ public class InitialLoad {
         cup.addNationalTeam(t6);
 
         NationalTeam t7 = new NationalTeam();
-        t7.setName("Itália");
+        t7.setName("Marrocos");
         t7.setGroup('B');
         t7.setScore(7);
         cup.addNationalTeam(t7);
