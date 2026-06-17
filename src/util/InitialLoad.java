@@ -57,9 +57,7 @@ public class InitialLoad {
         t8.setGroup('B');
         t8.setScore(8);
         cup.addNationalTeam(t8);
-
         //  PARTIDAS
-
         Match m1 = new Match();
         m1.setHomeTeam("Brasil");
         m1.setAwayTeam("Argentina");
