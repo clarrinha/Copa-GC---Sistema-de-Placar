@@ -11,7 +11,7 @@ public class Cup {
     // Listas
     ArrayList<NationalTeam> nationalTeam = new ArrayList<>();
     ArrayList<Match> match = new ArrayList<>();
-    ArrayList<String> topScore = new ArrayList<>();
+    ArrayList<String> topScorers = new ArrayList<>();
 
 
     // Scanner único da classe
@@ -33,58 +33,81 @@ public class Cup {
 
     public void addTopscore() {
         // ADICIONAR ARTILHEIROS
-        topScore.add("Neymar");
-        topScore.add("Ronaldo");
-        topScore.add("Messi");
-        topScore.add("Ronaldinho");
-        topScore.add("Rivaldo");
-        topScore.add("Pelé");
+        topScorers.add("Neymar");
+        topScorers.add("Ronaldo");
+        topScorers.add("Messi");
+        topScorers.add("Ronaldinho");
+        topScorers.add("Rivaldo");
+        topScorers.add("Pelé");
     }
 
 
     // Mostrar seleções por grupo
     public void callGroup() {
-        System.out.println("Escolha o grupo que você quer ver:");
-        char choice = Character.toUpperCase(scanner.next().charAt(0));
+        try {
+            System.out.println("Escolha o grupo que você quer ver:");
+            char choice = Character.toUpperCase(scanner.next().charAt(0));
 
-        for(NationalTeam n : nationalTeam){
-              if(n.getGroup() == choice) {
-                  System.out.println(n);
-                  System.out.println();
-              }else{
-                  System.out.println("Opção invalida");
-              }
+            boolean found = false;
+
+            for (NationalTeam n : nationalTeam) {
+                if (n.getGroup() == choice) {
+                    System.out.println(n);
+                    System.out.println("-------------");
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Grupo inválido ou inexistente.");
+            }
+
+        } catch (Exception e) {
+            System.out.println("Erro na leitura da entrada.");
         }
-
-
     }
 
     // Mostrar top scorers
     public void topScore() {
-        for (int i = 0; i < topScore.size(); i++) {
-            System.out.println((i + 1) + "º - " + topScore.get(i));
+        for (int i = 0; i < topScorers.size(); i++) {
+            System.out.println((i + 1) + "º - " + topScorers.get(i));
         }
     }
 
     // Verificar classificação
-   public void calculateTheStandings() {
+    public void calculateTheStandings() {
+
+        if (nationalTeam.isEmpty()) {
+            System.out.println("Nenhum time cadastrado.");
+            return;
+        }
+
         System.out.println("Qual time você quer saber se classificou?");
         int choice = scanner.nextInt();
 
         if (choice >= 0 && choice < nationalTeam.size()) {
 
-            int sc = nationalTeam.get(choice).getScore();
+            NationalTeam team = nationalTeam.get(choice);
+            int sc = team.getScore();
+
+            System.out.println("Time selecionado: " + team.getName());
+            System.out.println("Pontuação atual: " + sc);
+
+            System.out.println("Verificando status...");
 
             if (sc >= 8) {
-                System.out.println("Qualified!");
+                System.out.println("Qualified! (mínimo: 8 pontos)");
             } else {
-                System.out.println("Disqualified!");
+                System.out.println("Disqualified! Faltaram " + (8 - sc) + " pontos.");
             }
 
+            System.out.println("Processo concluído.");
+
         } else {
-            System.out.println("Índice inválido");
+            System.out.println("Índice inválido!");
         }
     }
+
 
 
 
