@@ -67,22 +67,31 @@ public class Cup {
     }
 
     // Verificar classificação
-   public void calculateTheStandings() {
-        System.out.println("Qual time você quer saber se classificou?");
-        int choice = scanner.nextInt();
+    public void calculateTheStandings() {
+        System.out.print("Qual time você quer saber se classificou? (Digite o nome): ");
+        String teamName = scanner.next();
 
-        if (choice >= 0 && choice < nationalTeam.size()) {
+        NationalTeam foundTeam = null;
 
-            int sc = nationalTeam.get(choice).getScore();
+        // Procurando o time digitado dentro da lista de seleções
+        for (NationalTeam n : nationalTeam) {
+            if (n.getName().equalsIgnoreCase(teamName)) {
+                foundTeam = n;
+                break;
+            }
+        }
+
+        // Se o time foi encontrado na lista, verifica os pontos dele
+        if (foundTeam != null) {
+            int sc = foundTeam.getScore();
 
             if (sc >= 8) {
-                System.out.println("Qualified!");
+                System.out.println("A seleção do(a) " + foundTeam.getName() + " está CLASSIFICADA! (Pontos: " + sc + ")");
             } else {
-                System.out.println("Disqualified!");
+                System.out.println("A seleção do(a) " + foundTeam.getName() + " NÃO está classificada. (Pontos: " + sc + ")");
             }
-
         } else {
-            System.out.println("Índice inválido");
+            System.out.println("A seleção '" + teamName + "' não foi encontrada. Verifique a ortografia.");
         }
     }
 
