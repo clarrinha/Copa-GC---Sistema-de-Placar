@@ -82,7 +82,7 @@ public class Cup {
             }
 
         } else {
-            System.out.println("Índice inválido");
+            System.out.println("Índice inválido!");
         }
     }
 
