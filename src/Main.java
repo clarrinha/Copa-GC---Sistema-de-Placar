@@ -15,9 +15,9 @@ void main() {
 
         System.out.println("\n=== Copa GC — Menu Principal ===");
         System.out.println("1. Listar seleções por grupo"); // feito
-        System.out.println("2. Registrar resultado de partida"); // Rafael TODO
-        System.out.println("3. Exibir classificação do grupo"); // Pedro TODO
-        System.out.println("4. Listar artilheiros"); // Pedro TODO
+        System.out.println("2. Registrar resultado de partida");
+        System.out.println("3. Exibir classificação do grupo");
+        System.out.println("4. Listar artilheiros");
         System.out.println("0. Sair");
         System.out.print("Escolha: ");
 
