@@ -4,7 +4,7 @@ Sistema de gerenciamento de uma Copa do Mundo simplificada desenvolvido em Java 
 
 ---
 
-##  Objetivo
+## Objetivo
 
 O sistema permite:
 
@@ -17,7 +17,7 @@ O sistema permite:
 
 ---
 
-##  Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 COPA-GC---SISTEMA-DE-PLACAR/
@@ -36,9 +36,9 @@ COPA-GC---SISTEMA-DE-PLACAR/
 
 ---
 
-##  Arquitetura do Sistema
+## Arquitetura do Sistema
 
-###  model
+### model
 
 Responsável pelas entidades do sistema.
 
@@ -117,8 +117,6 @@ calcularClassificacao()
 
 ---
 
-
-
 ### Main.java
 
 Ponto de entrada da aplicação.
@@ -133,7 +131,7 @@ Ponto de entrada da aplicação.
 
 ---
 
-##  Funcionalidades
+## Funcionalidades
 
 ### 1. Adicionar Seleção
 
@@ -157,8 +155,7 @@ Calcula e exibe a classificação atual dos grupos.
 
 ---
 
-
-##  Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ```text
 Java
@@ -185,6 +182,8 @@ ArrayList
 ## Como Executar
 Execute a classe Main.java usando a IDE INTELLIJ
 
+Compile via terminal com javac src/\*.java e rode java Main.
+
 ### Compilar
 
 ```bash
@@ -201,9 +200,9 @@ Execute a classe Main.java usando a IDE INTELLIJ
 
 ## Equipe
 
-- Gabriel Saraiva 
-- Maria Clara 
-- Rafael Fagner 
+- Gabriel Saraiva
+- Maria Clara
+- Rafael Fagner
 - Pedro Luis
 
 ---
