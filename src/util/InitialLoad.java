@@ -80,7 +80,7 @@ public class InitialLoad {
         cup.registrateMatch(m3);
 
         Match m4 = new Match();
-        m4.setHomeTeam("Itália");
+        m4.setHomeTeam("Marrocos");
         m4.setAwayTeam("Inglaterra");
         m4.setGolsA(0);
         m4.setGolsB(2);
