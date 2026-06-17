@@ -50,7 +50,7 @@ public class Cup {
         for(NationalTeam n : nationalTeam){
               if(n.getGroup() == choice) {
                   System.out.println(n);
-                  System.out.println();
+                  System.out.println("-------------");
               }else{
                   System.out.println("Opção invalida");
               }
