@@ -1,7 +1,7 @@
 package model;
 
 public class NationalTeam {
-    // Atributos da classe
+    // Atributos classe
     private String name;
     private char group;
     private String fifaCode;
