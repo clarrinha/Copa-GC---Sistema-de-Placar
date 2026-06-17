@@ -47,7 +47,7 @@ public class InitialLoad {
         cup.addNationalTeam(t6);
 
         NationalTeam t7 = new NationalTeam();
-        t7.setName("Marrocos");
+        t7.setName("Itália");
         t7.setGroup('B');
         t7.setScore(7);
         cup.addNationalTeam(t7);
@@ -57,7 +57,9 @@ public class InitialLoad {
         t8.setGroup('B');
         t8.setScore(8);
         cup.addNationalTeam(t8);
+
         //  PARTIDAS
+
         Match m1 = new Match();
         m1.setHomeTeam("Brasil");
         m1.setAwayTeam("Argentina");
@@ -80,7 +82,7 @@ public class InitialLoad {
         cup.registrateMatch(m3);
 
         Match m4 = new Match();
-        m4.setHomeTeam("Marrocos");
+        m4.setHomeTeam("Itália");
         m4.setAwayTeam("Inglaterra");
         m4.setGolsA(0);
         m4.setGolsB(2);
