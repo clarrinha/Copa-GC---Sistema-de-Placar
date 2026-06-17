@@ -158,7 +158,7 @@ Calcula e exibe a classificação atual dos grupos.
 ---
 
 
-## 💻 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 ```text
 Java
@@ -170,7 +170,7 @@ ArrayList
 
 ---
 
-## 📚 Conceitos Aplicados
+## Conceitos Aplicados
 
 - Encapsulamento;
 - Classes e Objetos;
@@ -198,7 +198,7 @@ ArrayList
 
 ---
 
-## 👨‍💻 Equipe
+## Equipe
 
 - Gabriel Saraiva 
 - Maria Clara 
